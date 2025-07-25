@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  @apply bg-vscode-bg text-vscode-text;
+}
+
+body {
+  @apply bg-vscode-bg text-vscode-text font-sans;
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-vscode-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-vscode-border;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-vscode-text-dim;
+}
+
+/* VS Code style components */
+@layer components {
+  .vscode-button {
+    @apply px-4 py-1.5 bg-vscode-blue text-white rounded-sm font-normal text-xs;
+    @apply hover:bg-vscode-blue-light focus:outline-none focus:ring-1 focus:ring-vscode-blue-light;
+    @apply transition-colors duration-150;
+  }
+  
+  .vscode-button-secondary {
+    @apply px-4 py-1.5 bg-vscode-bg-lighter text-vscode-text rounded-sm font-normal text-xs;
+    @apply hover:bg-vscode-hover border border-vscode-border;
+    @apply focus:outline-none focus:ring-1 focus:ring-vscode-blue;
+    @apply transition-colors duration-150;
+  }
+  
+  .vscode-input {
+    @apply w-full px-2 py-1 bg-vscode-bg-light text-vscode-text rounded-sm text-xs;
+    @apply border border-vscode-border focus:border-vscode-blue;
+    @apply focus:outline-none focus:ring-1 focus:ring-vscode-blue;
+    @apply placeholder-vscode-text-dim;
+  }
+  
+  .vscode-tab {
+    @apply px-4 py-2 text-vscode-text-dim cursor-pointer;
+    @apply hover:text-vscode-text border-b-2 border-transparent;
+    @apply transition-colors duration-150;
+  }
+  
+  .vscode-tab-active {
+    @apply text-vscode-text border-vscode-blue;
+  }
+  
+  .vscode-sidebar-item {
+    @apply flex items-center px-4 py-1.5 text-vscode-text cursor-pointer;
+    @apply hover:bg-vscode-hover transition-colors duration-150;
+  }
+  
+  .vscode-sidebar-item-active {
+    @apply bg-vscode-hover;
+  }
+  
+  .vscode-panel {
+    @apply bg-vscode-bg-light border border-vscode-border rounded-sm;
+  }
+}
+
+/* Terminal styles */
+.xterm {
+  padding: 8px;
+  height: 100%;
+}
+
+.xterm-viewport {
+  background-color: transparent !important;
+}
+
+/* Monaco Editor overrides */
+.monaco-editor {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}

@@ -1,0 +1,151 @@
+{
+  "name": "claude-code-spinalsurgery",
+  "displayName": "Claude Code for Spinal Surgery Research",
+  "description": "AI-powered coding assistant for spine surgery research platform",
+  "version": "1.0.0",
+  "publisher": "spinalsurgery-research",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["AI", "Programming Languages", "Other"],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Claude Code - Spinal Surgery",
+      "properties": {
+        "claudeCode.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your Claude API key for authentication"
+        },
+        "claudeCode.model": {
+          "type": "string",
+          "default": "claude-3-opus-20240229",
+          "enum": [
+            "claude-3-opus-20240229",
+            "claude-3-sonnet-20240229",
+            "claude-3-haiku-20240307"
+          ],
+          "description": "Claude model to use"
+        },
+        "claudeCode.maxTokens": {
+          "type": "number",
+          "default": 4096,
+          "description": "Maximum tokens for Claude responses"
+        },
+        "claudeCode.temperature": {
+          "type": "number",
+          "default": 0.7,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Temperature for response generation"
+        },
+        "claudeCode.mcpServers": {
+          "type": "object",
+          "default": {
+            "filesystem": {
+              "enabled": true,
+              "path": "/home/drjang00/DevEnvironments/spinalsurgery-research"
+            },
+            "github": {
+              "enabled": true,
+              "token": ""
+            }
+          },
+          "description": "MCP server configurations"
+        },
+        "claudeCode.customPrompts": {
+          "type": "object",
+          "default": {
+            "paperDraft": "You are an expert medical researcher specializing in spine surgery. Generate a comprehensive research paper draft following standard medical journal format.",
+            "codeReview": "Review this code for spine surgery research platform, focusing on data security, HIPAA compliance, and best practices.",
+            "dataAnalysis": "Analyze this medical data following proper statistical methods for clinical research."
+          },
+          "description": "Custom prompts for specific tasks"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "claudeCode.generatePaperDraft",
+        "title": "Claude: Generate Paper Draft"
+      },
+      {
+        "command": "claudeCode.analyzeData",
+        "title": "Claude: Analyze Clinical Data"
+      },
+      {
+        "command": "claudeCode.reviewCode",
+        "title": "Claude: Review Medical Code"
+      },
+      {
+        "command": "claudeCode.askQuestion",
+        "title": "Claude: Ask Research Question"
+      },
+      {
+        "command": "claudeCode.searchPapers",
+        "title": "Claude: Search Related Papers"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "claudeCode.askQuestion",
+          "group": "claude"
+        },
+        {
+          "command": "claudeCode.reviewCode",
+          "group": "claude",
+          "when": "resourceExtname == .py || resourceExtname == .ts || resourceExtname == .tsx"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "claudeCode.analyzeData",
+          "group": "claude",
+          "when": "resourceExtname == .csv || resourceExtname == .xlsx"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "claudeCode.askQuestion",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a"
+      },
+      {
+        "command": "claudeCode.generatePaperDraft",
+        "key": "ctrl+shift+p",
+        "mac": "cmd+shift+p"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "claudeCodeChat",
+          "name": "Claude AI Assistant",
+          "icon": "$(hubot)",
+          "contextualTitle": "Claude AI"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0",
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^20.x",
+    "typescript": "^5.0.0"
+  }
+}

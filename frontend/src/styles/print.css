@@ -1,0 +1,182 @@
+/* Print Styles for Papers and Reports */
+@media print {
+  /* Hide UI elements during print */
+  .no-print,
+  [class*="activity-bar"],
+  [class*="sidebar"],
+  [class*="terminal"],
+  [class*="status-bar"],
+  [class*="title-bar"],
+  button,
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Reset colors for print */
+  * {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 2cm;
+  }
+
+  body {
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+
+  /* Headings */
+  h1 {
+    font-size: 18pt;
+    margin-top: 0;
+    margin-bottom: 12pt;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 16pt;
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14pt;
+    margin-top: 12pt;
+    margin-bottom: 6pt;
+    page-break-after: avoid;
+  }
+
+  /* Paragraphs */
+  p {
+    margin-bottom: 12pt;
+    text-align: justify;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12pt 0;
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    border: 1px solid #000;
+    padding: 6pt;
+    text-align: left;
+  }
+
+  th {
+    font-weight: bold;
+    background-color: #f0f0f0 !important;
+  }
+
+  /* Images and figures */
+  img, figure {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  figure {
+    margin: 12pt 0;
+    text-align: center;
+  }
+
+  figcaption {
+    font-size: 10pt;
+    margin-top: 6pt;
+  }
+
+  /* Lists */
+  ul, ol {
+    margin-bottom: 12pt;
+  }
+
+  li {
+    margin-bottom: 3pt;
+  }
+
+  /* Page breaks */
+  .page-break {
+    page-break-after: always;
+  }
+
+  .no-break {
+    page-break-inside: avoid;
+  }
+
+  /* Paper-specific styles */
+  .paper-title {
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18pt;
+  }
+
+  .paper-authors {
+    text-align: center;
+    font-size: 11pt;
+    margin-bottom: 12pt;
+  }
+
+  .paper-abstract {
+    margin: 18pt 0;
+    padding: 12pt;
+    border: 1px solid #000;
+    font-size: 10pt;
+  }
+
+  .paper-keywords {
+    font-size: 10pt;
+    font-style: italic;
+    margin-bottom: 18pt;
+  }
+
+  /* References */
+  .references {
+    font-size: 10pt;
+  }
+
+  .reference-item {
+    margin-bottom: 6pt;
+    padding-left: 18pt;
+    text-indent: -18pt;
+  }
+
+  /* Statistical tables */
+  .stats-table {
+    font-size: 10pt;
+  }
+
+  /* Headers and footers */
+  .print-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1cm;
+    text-align: center;
+    font-size: 10pt;
+  }
+
+  .print-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1cm;
+    text-align: center;
+    font-size: 10pt;
+  }
+
+  /* Page numbers */
+  .page-number:after {
+    content: counter(page);
+  }
+}

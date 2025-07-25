@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: spinalsurgery_postgres_dev
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: spinalsurgery_research
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: spinalsurgery_redis_dev
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data_dev:/data
+    command: redis-server --appendonly yes
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: spinalsurgery_ollama_dev
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data_dev:/root/.ollama
+    environment:
+      OLLAMA_HOST: 0.0.0.0
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: spinalsurgery_chromadb_dev
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data_dev:/chroma/chroma
+    environment:
+      IS_PERSISTENT: TRUE
+      ANONYMIZED_TELEMETRY: FALSE
+
+volumes:
+  postgres_data_dev:
+  redis_data_dev:
+  ollama_data_dev:
+  chroma_data_dev:
