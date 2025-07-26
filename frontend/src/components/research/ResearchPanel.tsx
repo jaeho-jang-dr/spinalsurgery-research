@@ -179,9 +179,43 @@ export function ResearchPanel() {
             // 검색 상태 모니터링 시작
             startSearchMonitoring(jobId)
           }
-        } catch (error) {
+        } catch (error: any) {
           console.error('Failed to start research:', error)
-          toast.error('논문 검색에 실패했습니다')
+          console.error('Error response:', error.response?.data)
+          console.error('Error status:', error.response?.status)
+          
+          if (error.response?.status === 401) {
+            toast.error('인증이 필요합니다. 다시 로그인해주세요.')
+          } else if (error.response?.status === 404) {
+            toast.error('API 엔드포인트를 찾을 수 없습니다.')
+          } else {
+            toast.error(`논문 검색에 실패했습니다: ${error.response?.data?.detail || error.message}`)
+          }
+        }
+      } else if (data.aiOption === 'complete') {
+        toast.info('완전 자동 연구를 시작합니다...')
+        
+        try {
+          // Start complete AI research workflow
+          const researchResponse = await api.startCompleteResearch({
+            title: data.title || `${data.field} Research Study`,
+            type: 'Clinical Study',
+            keywords: data.keywords,
+            objectives: data.details,
+            description: data.details
+          })
+          
+          if (researchResponse.data.status === 'completed') {
+            toast.success('연구 프로젝트가 성공적으로 생성되었습니다!')
+            toast.info(`프로젝트 ID: ${researchResponse.data.project_id}`)
+            
+            // Show results summary
+            const outputs = researchResponse.data.outputs
+            toast.success(`${outputs.documents_collected}개의 문서를 수집하고 논문 초안을 작성했습니다!`)
+          }
+        } catch (error) {
+          console.error('Failed to start complete research:', error)
+          toast.error('완전 자동 연구에 실패했습니다')
         }
       } else {
         toast.info(`${data.aiOption} 기능은 준비 중입니다`)
@@ -224,12 +258,48 @@ export function ResearchPanel() {
           // 검색 세션 새로고침
           fetchSearchSessions(currentProject.id)
         }
+      } else if (data.aiOption === 'complete') {
+        toast.info('완전 자동 연구를 시작합니다...')
+        
+        try {
+          // Start complete AI research workflow
+          const researchResponse = await api.startCompleteResearch({
+            title: data.title || currentProject.title,
+            type: 'Clinical Study',
+            keywords: data.keywords || currentProject.keywords,
+            objectives: data.details,
+            description: data.details
+          })
+          
+          if (researchResponse.data.status === 'completed') {
+            toast.success('연구가 성공적으로 완료되었습니다!')
+            toast.info(`프로젝트 ID: ${researchResponse.data.project_id}`)
+            
+            // Show results summary
+            const outputs = researchResponse.data.outputs
+            toast.success(`${outputs.documents_collected}개의 문서를 수집하고 논문 초안을 작성했습니다!`)
+            
+            setShowResearchForm(false)
+          }
+        } catch (error) {
+          console.error('Failed to start complete research:', error)
+          toast.error('완전 자동 연구에 실패했습니다')
+        }
       } else {
         toast.info(`${data.aiOption} 기능은 준비 중입니다`)
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Failed to start research:', error)
-      toast.error('논문 검색에 실패했습니다')
+      console.error('Error response:', error.response?.data)
+      console.error('Error status:', error.response?.status)
+      
+      if (error.response?.status === 401) {
+        toast.error('인증이 필요합니다. 다시 로그인해주세요.')
+      } else if (error.response?.status === 404) {
+        toast.error('API 엔드포인트를 찾을 수 없습니다.')
+      } else {
+        toast.error(`논문 검색에 실패했습니다: ${error.response?.data?.detail || error.message}`)
+      }
     }
   }
 

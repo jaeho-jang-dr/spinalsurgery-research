@@ -1,0 +1,61 @@
+{
+  "total_documents": 15,
+  "sources": {
+    "pubmed": 8,
+    "google_scholar": 5,
+    "clinical_trials": 2
+  },
+  "search_sites_used": [
+    {
+      "name": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "documents_found": 8,
+      "search_date": "2025-07-27 00:35:50",
+      "search_terms": [
+        "spinal surgery",
+        "pain management",
+        "postoperative care"
+      ]
+    },
+    {
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/",
+      "documents_found": 5,
+      "search_date": "2025-07-27 00:35:50",
+      "search_terms": [
+        "spinal surgery",
+        "pain management",
+        "postoperative care"
+      ]
+    },
+    {
+      "name": "ClinicalTrials.gov",
+      "url": "https://clinicaltrials.gov/",
+      "documents_found": 2,
+      "search_date": "2025-07-27 00:35:50",
+      "search_terms": [
+        "spinal surgery",
+        "pain management",
+        "postoperative care"
+      ]
+    }
+  ],
+  "key_papers": [
+    {
+      "title": "Recent advances in minimally invasive spine surgery",
+      "authors": "Chen et al.",
+      "year": 2023,
+      "journal": "Spine",
+      "relevance": "High",
+      "source": "PubMed"
+    },
+    {
+      "title": "Outcomes of spinal fusion in elderly patients",
+      "authors": "Park et al.",
+      "year": 2023,
+      "journal": "J Neurosurg Spine",
+      "relevance": "Medium",
+      "source": "Google Scholar"
+    }
+  ]
+}

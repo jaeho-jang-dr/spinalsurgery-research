@@ -1,0 +1,19 @@
+{
+  "demographics": {
+    "total_patients": 162,
+    "age": {
+      "mean": 62.9,
+      "sd": 13.0
+    },
+    "gender": {
+      "male": 81,
+      "female": 81
+    }
+  },
+  "outcomes": {
+    "primary": {
+      "improvement_rate": 0.78,
+      "p_value": 0.046
+    }
+  }
+}

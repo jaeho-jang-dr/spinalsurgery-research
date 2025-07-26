@@ -12,6 +12,53 @@ from app.services.scraper_service import scraper_service
 
 router = APIRouter()
 
+# Search sites configuration
+SEARCH_SITES = [
+    {
+        "id": "pubmed",
+        "name": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/",
+        "description": "National Library of Medicine database",
+        "enabled": True
+    },
+    {
+        "id": "pmc",
+        "name": "PubMed Central",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/",
+        "description": "Free full-text archive",
+        "enabled": True
+    },
+    {
+        "id": "google_scholar",
+        "name": "Google Scholar",
+        "url": "https://scholar.google.com/",
+        "description": "Academic search engine",
+        "enabled": True
+    },
+    {
+        "id": "cochrane",
+        "name": "Cochrane Library",
+        "url": "https://www.cochranelibrary.com/",
+        "description": "Systematic reviews database",
+        "enabled": False
+    },
+    {
+        "id": "scopus",
+        "name": "Scopus",
+        "url": "https://www.scopus.com/",
+        "description": "Abstract and citation database",
+        "enabled": False
+    }
+]
+
+
+@router.get("/search-sites")
+async def get_search_sites(
+    current_user: User = Depends(deps.get_current_user),
+) -> Any:
+    """Get available search sites"""
+    return SEARCH_SITES
+
 
 @router.get("/sources")
 async def get_paper_sources(

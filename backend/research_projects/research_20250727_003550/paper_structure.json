@@ -1,0 +1,33 @@
+{
+  "title": "\ucc99\ucd94 \uc218\uc220 \ud6c4 \ud1b5\uc99d \uad00\ub9ac \uc5f0\uad6c",
+  "type": "systematic_review",
+  "sections": {
+    "abstract": {
+      "background": "Background section",
+      "methods": "Methods summary",
+      "results": "Key results",
+      "conclusions": "Main conclusions"
+    },
+    "introduction": {
+      "background": "Detailed background",
+      "objectives": "\ucc99\ucd94 \uc218\uc220 \ud6c4 \ud6a8\uacfc\uc801\uc778 \ud1b5\uc99d \uad00\ub9ac \ubc29\ubc95 \uc5f0\uad6c",
+      "hypotheses": "Research hypotheses"
+    },
+    "methods": {
+      "study_design": "systematic_review design",
+      "participants": "Participant selection criteria",
+      "procedures": "Study procedures",
+      "statistical_analysis": "Statistical methods"
+    },
+    "results": {
+      "demographics": "Patient demographics",
+      "primary_outcomes": "Primary outcome results",
+      "secondary_outcomes": "Secondary outcomes"
+    },
+    "discussion": {
+      "key_findings": "Summary of key findings",
+      "limitations": "Study limitations",
+      "implications": "Clinical implications"
+    }
+  }
+}

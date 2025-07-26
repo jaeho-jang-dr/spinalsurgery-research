@@ -1,0 +1,230 @@
+{
+  "name": "spinalsurgery-research",
+  "displayName": "SpinalSurgery Research Platform",
+  "description": "Integrated research environment for medical paper writing with Claude AI",
+  "version": "1.0.0",
+  "publisher": "drjang",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Data Science",
+    "Notebooks"
+  ],
+  "keywords": [
+    "research",
+    "medical",
+    "claude",
+    "ai",
+    "paper writing"
+  ],
+  "icon": "resources/icon.png",
+  "activationEvents": [
+    "onCommand:spinalsurgery.openDashboard",
+    "onCommand:spinalsurgery.newResearch",
+    "onCommand:spinalsurgery.claudeChat",
+    "onCommand:spinalsurgery.searchPapers",
+    "onView:spinalsurgery.projectExplorer",
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "spinalsurgery.openDashboard",
+        "title": "Open Research Dashboard",
+        "category": "SpinalSurgery",
+        "icon": "$(dashboard)"
+      },
+      {
+        "command": "spinalsurgery.newResearch",
+        "title": "New Research Project",
+        "category": "SpinalSurgery",
+        "icon": "$(new-file)"
+      },
+      {
+        "command": "spinalsurgery.claudeChat",
+        "title": "Chat with Claude",
+        "category": "SpinalSurgery",
+        "icon": "$(comment-discussion)"
+      },
+      {
+        "command": "spinalsurgery.searchPapers",
+        "title": "Search Academic Papers",
+        "category": "SpinalSurgery",
+        "icon": "$(search)"
+      },
+      {
+        "command": "spinalsurgery.analyzeData",
+        "title": "Analyze Research Data",
+        "category": "SpinalSurgery",
+        "icon": "$(graph)"
+      },
+      {
+        "command": "spinalsurgery.manageBibliography",
+        "title": "Manage Bibliography",
+        "category": "SpinalSurgery",
+        "icon": "$(book)"
+      },
+      {
+        "command": "spinalsurgery.exportPaper",
+        "title": "Export Paper",
+        "category": "SpinalSurgery",
+        "icon": "$(export)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "spinalsurgery-research",
+          "title": "Research Platform",
+          "icon": "resources/research-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "spinalsurgery-research": [
+        {
+          "id": "spinalsurgery.projectExplorer",
+          "name": "Research Projects",
+          "icon": "$(folder-library)",
+          "contextualTitle": "Research Projects"
+        },
+        {
+          "id": "spinalsurgery.dataExplorer",
+          "name": "Data Sets",
+          "icon": "$(database)",
+          "contextualTitle": "Research Data"
+        },
+        {
+          "id": "spinalsurgery.bibliography",
+          "name": "Bibliography",
+          "icon": "$(references)",
+          "contextualTitle": "References"
+        },
+        {
+          "id": "spinalsurgery.aiAssistant",
+          "name": "AI Assistant",
+          "icon": "$(hubot)",
+          "contextualTitle": "Claude AI"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "spinalsurgery.projectExplorer",
+        "contents": "No research projects found.\n[Create New Project](command:spinalsurgery.newResearch)"
+      }
+    ],
+    "configuration": {
+      "title": "SpinalSurgery Research",
+      "properties": {
+        "spinalsurgery.apiEndpoint": {
+          "type": "string",
+          "default": "http://localhost:8000",
+          "description": "Backend API endpoint"
+        },
+        "spinalsurgery.claudeApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Claude API Key (stored securely)"
+        },
+        "spinalsurgery.autoSaveInterval": {
+          "type": "number",
+          "default": 300,
+          "description": "Auto-save interval in seconds"
+        },
+        "spinalsurgery.defaultExportFormat": {
+          "type": "string",
+          "enum": ["docx", "pdf", "latex", "markdown"],
+          "default": "docx",
+          "description": "Default paper export format"
+        },
+        "spinalsurgery.enableAISuggestions": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable AI-powered writing suggestions"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "spinalsurgery.claudeChat",
+        "key": "ctrl+shift+c",
+        "mac": "cmd+shift+c",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "spinalsurgery.searchPapers",
+        "key": "ctrl+shift+p",
+        "mac": "cmd+shift+p"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "spinalsurgery.claudeChat",
+          "when": "editorHasSelection",
+          "group": "spinalsurgery@1"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "spinalsurgery.newResearch",
+          "when": "view == spinalsurgery.projectExplorer",
+          "group": "navigation"
+        }
+      ]
+    },
+    "walkthroughs": [
+      {
+        "id": "spinalsurgery.welcome",
+        "title": "Get Started with SpinalSurgery Research",
+        "description": "Learn how to use the integrated research platform",
+        "steps": [
+          {
+            "id": "spinalsurgery.welcome.createProject",
+            "title": "Create Your First Research Project",
+            "description": "Start a new research project with AI assistance.\n[Create Project](command:spinalsurgery.newResearch)",
+            "media": {
+              "image": "resources/walkthrough/create-project.png",
+              "altText": "Creating a new research project"
+            }
+          },
+          {
+            "id": "spinalsurgery.welcome.claudeIntegration",
+            "title": "Use Claude AI Assistant",
+            "description": "Get help writing, analyzing, and improving your research.\n[Open Claude Chat](command:spinalsurgery.claudeChat)",
+            "media": {
+              "image": "resources/walkthrough/claude-chat.png",
+              "altText": "Chatting with Claude AI"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "claude-ai": "^1.0.0",
+    "sqlite3": "^5.1.7",
+    "marked": "^11.1.1"
+  }
+}

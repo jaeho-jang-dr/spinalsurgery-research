@@ -1,0 +1,23 @@
+{
+  "job_id": "job_20250727_003511_test-project-123",
+  "project_id": "test-project-123",
+  "started_at": "2025-07-27T00:35:11.928125",
+  "search_sites": [
+    {
+      "id": "pubmed",
+      "name": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/",
+      "description": "National Library of Medicine database",
+      "enabled": true
+    },
+    {
+      "id": "google_scholar",
+      "name": "Google Scholar",
+      "url": "https://scholar.google.com/",
+      "description": "Academic search engine",
+      "enabled": true
+    }
+  ],
+  "target_count": 10,
+  "ai_option": "complete_auto"
+}

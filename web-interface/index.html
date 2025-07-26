@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinal Surgery Research AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Spinal Surgery Research AI Assistant</h1>
+            <p>Claude + Ollama 통합 연구 도구</p>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <h2>AI 모델 선택</h2>
+                <div class="model-selector">
+                    <label>
+                        <input type="radio" name="model" value="claude" checked>
+                        <span>Claude (고품질)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="model" value="ollama-mistral">
+                        <span>Mistral 7B (빠름)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="model" value="ollama-llama2">
+                        <span>Llama 2 (일반)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="model" value="ollama-codellama">
+                        <span>CodeLlama (코드)</span>
+                    </label>
+                </div>
+
+                <h2>빠른 작업</h2>
+                <div class="quick-actions">
+                    <button onclick="searchPapers()">📚 논문 검색</button>
+                    <button onclick="analyzeAbstract()">🔍 초록 분석</button>
+                    <button onclick="generateOutline()">📝 개요 생성</button>
+                    <button onclick="checkReferences()">📖 참고문헌 확인</button>
+                </div>
+
+                <h2>토큰 사용량</h2>
+                <div id="token-usage" class="token-usage">
+                    <p>오늘: <span id="today-tokens">0</span> 토큰</p>
+                    <p>비용: $<span id="today-cost">0.00</span></p>
+                </div>
+            </div>
+
+            <div class="chat-area">
+                <div id="chat-messages" class="chat-messages"></div>
+                <div class="input-area">
+                    <textarea id="user-input" placeholder="질문을 입력하세요... (Shift+Enter로 줄바꿈)" rows="3"></textarea>
+                    <button id="send-btn" onclick="sendMessage()">전송</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="setup-guide" id="setup-guide">
+            <h2>⚠️ 설정 필요</h2>
+            <p>AI Assistant를 사용하려면 다음 설정이 필요합니다:</p>
+            <ol>
+                <li>Ollama 설치: <code>./install-ollama.sh</code></li>
+                <li>Claude CLI 로그인: <code>claude login</code></li>
+                <li>서버 재시작</li>
+            </ol>
+            <button onclick="checkSetup()">설정 확인</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

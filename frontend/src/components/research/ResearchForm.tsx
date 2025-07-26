@@ -17,7 +17,7 @@ export function ResearchForm({ onSubmit, initialValues }: ResearchFormProps) {
   const [keywords, setKeywords] = useState<string[]>(initialValues?.keywords || [])
   const [keywordInput, setKeywordInput] = useState('')
   const [details, setDetails] = useState('')
-  const [aiOption, setAiOption] = useState<'search' | 'draft' | 'stats' | 'consent'>('search')
+  const [aiOption, setAiOption] = useState<'search' | 'draft' | 'stats' | 'consent' | 'complete'>('search')
 
   const handleAddKeyword = () => {
     if (keywordInput.trim() && keywords.length < 10) {
@@ -152,6 +152,7 @@ export function ResearchForm({ onSubmit, initialValues }: ResearchFormProps) {
           <div className="grid grid-cols-2 gap-3">
             {[
               { id: 'search', label: '자료 검색', desc: '관련 논문 검색 및 정리' },
+              { id: 'complete', label: '완전 자동 연구', desc: 'AI가 전체 연구 프로세스 수행' },
               { id: 'draft', label: '논문 초안 작성', desc: 'AI가 논문 초안 생성' },
               { id: 'stats', label: '통계 분석', desc: '데이터 분석 계획 수립' },
               { id: 'consent', label: 'Informed Consent', desc: '동의서 템플릿 생성' },
