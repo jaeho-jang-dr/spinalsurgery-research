@@ -1,0 +1,56 @@
+
+Robotic-Assisted versus Freehand Posterior Lumbar Interbody Fusion: 2-Year Comparative Outcomes
+
+Anderson DG, Thompson R, Lee JY, Martinez S, Kumar A
+Clinical Spine Surgery 2024
+DOI: 10.1097/BSD.0000000000001456
+
+ABSTRACT
+
+OBJECTIVE: Compare 2-year outcomes between robotic-assisted and freehand PLIF techniques.
+
+METHODS: Prospective cohort study of 100 patients (50 robotic, 50 freehand) undergoing single-level PLIF. Primary outcomes included accuracy of screw placement, fusion rates, and clinical outcomes.
+
+RESULTS: Screw accuracy was 98.5% (robotic) vs 93.2% (freehand) (p=0.02). Radiation exposure was lower in robotic group (23.4±8.2 vs 45.6±12.3 mGy, p<0.001). Clinical outcomes at 2 years were similar: ODI 17.2±8.1 vs 18.5±8.8 (p=0.44), fusion rates 96% vs 94% (p=0.65). Operative time was longer for robotic (195±42 vs 165±38 min, p<0.01).
+
+CONCLUSION: Robotic-assisted PLIF improves screw accuracy and reduces radiation exposure with similar 2-year clinical outcomes compared to freehand technique.
+                
+
+INTRODUCTION
+Lumbar fusion surgery has evolved significantly over the past decades, with various techniques developed to achieve solid arthrodesis while minimizing morbidity. The PLIF approach has gained popularity due to its specific advantages in treating degenerative lumbar conditions. Long-term outcomes, particularly at the 2-year mark, are crucial for evaluating the success of these procedures...
+
+MATERIALS AND METHODS
+Study Design and Patient Population
+This study was conducted following institutional review board approval. Patients were enrolled based on strict inclusion criteria including symptomatic degenerative disc disease, spondylolisthesis, or spinal stenosis requiring surgical intervention...
+
+Surgical Technique
+All procedures were performed by experienced spine surgeons using standardized techniques. For PLIF, the approach involved...
+
+Outcome Measures
+Clinical outcomes were assessed using validated questionnaires including the Visual Analog Scale (VAS) for back and leg pain, Oswestry Disability Index (ODI), and Short Form-36 (SF-36) health survey...
+
+RESULTS
+Demographics
+The study cohort consisted of patients with a mean age and gender distribution representative of the typical population undergoing lumbar fusion surgery...
+
+Clinical Outcomes
+At 24-month follow-up, significant improvements were observed in all clinical parameters. The mean VAS scores, ODI, and quality of life measures showed statistically significant improvements compared to baseline values...
+
+Radiological Outcomes
+Fusion assessment was performed using CT scans according to established criteria. The overall fusion rate at 2 years was determined by independent radiologists...
+
+Complications
+All complications were recorded and classified according to severity. The overall complication rate was within acceptable ranges for this type of surgery...
+
+DISCUSSION
+Our study demonstrates that PLIF provides excellent clinical and radiological outcomes at 2-year follow-up. These results are consistent with previously published literature and support the use of this technique for appropriate indications...
+
+The fusion rates achieved in our study compare favorably with other published series. The clinical improvements observed were maintained throughout the follow-up period, suggesting durability of the surgical outcomes...
+
+Limitations of this study include its design and the relatively short follow-up period. Longer-term studies are needed to assess the durability of these results and the incidence of adjacent segment disease...
+
+CONCLUSION
+PLIF demonstrates excellent 2-year outcomes with high fusion rates and significant clinical improvements. These results support its continued use in the treatment of degenerative lumbar conditions requiring fusion surgery.
+
+REFERENCES
+[Sample references would be listed here in actual papers]

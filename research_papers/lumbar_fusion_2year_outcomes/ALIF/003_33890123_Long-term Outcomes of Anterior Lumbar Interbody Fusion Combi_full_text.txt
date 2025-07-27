@@ -1,0 +1,56 @@
+
+Long-term Outcomes of Anterior Lumbar Interbody Fusion Combined with Posterior Instrumentation: A 2-Year Minimum Follow-up Study
+
+Smith JA, Johnson RB, Williams CD, Davis EF
+European Spine Journal 2022
+DOI: 10.1007/s00586-022-07123-z
+
+ABSTRACT
+
+BACKGROUND: Anterior lumbar interbody fusion (ALIF) with posterior instrumentation provides circumferential stability. This study reports 2-year minimum follow-up outcomes.
+
+METHODS: Retrospective analysis of 89 patients who underwent ALIF with posterior percutaneous pedicle screw fixation from 2019-2021. Clinical outcomes (VAS, ODI, SF-12) and radiological parameters were evaluated.
+
+RESULTS: Mean follow-up was 28.3±3.2 months. VAS back pain decreased from 6.9±1.7 to 1.9±1.1, ODI from 54.3±13.2 to 16.2±7.8 (both p<0.001). Lordosis improved from 38.2±12.1° to 52.3±10.8° and maintained at 51.8±10.5° at final follow-up. Fusion rate was 96.6%. Complications included 2 vascular injuries, 1 retrograde ejaculation, and 3 adjacent segment diseases requiring surgery.
+
+CONCLUSION: ALIF with posterior instrumentation demonstrates excellent clinical outcomes and lordosis restoration at 2-year follow-up, with acceptable complication rates.
+                
+
+INTRODUCTION
+Lumbar fusion surgery has evolved significantly over the past decades, with various techniques developed to achieve solid arthrodesis while minimizing morbidity. The ALIF approach has gained popularity due to its specific advantages in treating degenerative lumbar conditions. Long-term outcomes, particularly at the 2-year mark, are crucial for evaluating the success of these procedures...
+
+MATERIALS AND METHODS
+Study Design and Patient Population
+This study was conducted following institutional review board approval. Patients were enrolled based on strict inclusion criteria including symptomatic degenerative disc disease, spondylolisthesis, or spinal stenosis requiring surgical intervention...
+
+Surgical Technique
+All procedures were performed by experienced spine surgeons using standardized techniques. For ALIF, the approach involved...
+
+Outcome Measures
+Clinical outcomes were assessed using validated questionnaires including the Visual Analog Scale (VAS) for back and leg pain, Oswestry Disability Index (ODI), and Short Form-36 (SF-36) health survey...
+
+RESULTS
+Demographics
+The study cohort consisted of patients with a mean age and gender distribution representative of the typical population undergoing lumbar fusion surgery...
+
+Clinical Outcomes
+At 24-month follow-up, significant improvements were observed in all clinical parameters. The mean VAS scores, ODI, and quality of life measures showed statistically significant improvements compared to baseline values...
+
+Radiological Outcomes
+Fusion assessment was performed using CT scans according to established criteria. The overall fusion rate at 2 years was determined by independent radiologists...
+
+Complications
+All complications were recorded and classified according to severity. The overall complication rate was within acceptable ranges for this type of surgery...
+
+DISCUSSION
+Our study demonstrates that ALIF provides excellent clinical and radiological outcomes at 2-year follow-up. These results are consistent with previously published literature and support the use of this technique for appropriate indications...
+
+The fusion rates achieved in our study compare favorably with other published series. The clinical improvements observed were maintained throughout the follow-up period, suggesting durability of the surgical outcomes...
+
+Limitations of this study include its design and the relatively short follow-up period. Longer-term studies are needed to assess the durability of these results and the incidence of adjacent segment disease...
+
+CONCLUSION
+ALIF demonstrates excellent 2-year outcomes with high fusion rates and significant clinical improvements. These results support its continued use in the treatment of degenerative lumbar conditions requiring fusion surgery.
+
+REFERENCES
+[Sample references would be listed here in actual papers]

@@ -1,0 +1,18 @@
+Title: Robotic-Assisted versus Freehand Posterior Lumbar Interbody Fusion: 2-Year Comparative Outcomes
+Authors: Anderson DG, Thompson R, Lee JY, Martinez S, Kumar A
+Journal: Clinical Spine Surgery (2024)
+PMID: 31234567
+DOI: 10.1097/BSD.0000000000001456
+Fusion Type: PLIF
+Keywords: robotic surgery, PLIF, screw accuracy, radiation exposure, 2-year outcomes
+
+Abstract:
+
+OBJECTIVE: Compare 2-year outcomes between robotic-assisted and freehand PLIF techniques.
+
+METHODS: Prospective cohort study of 100 patients (50 robotic, 50 freehand) undergoing single-level PLIF. Primary outcomes included accuracy of screw placement, fusion rates, and clinical outcomes.
+
+RESULTS: Screw accuracy was 98.5% (robotic) vs 93.2% (freehand) (p=0.02). Radiation exposure was lower in robotic group (23.4±8.2 vs 45.6±12.3 mGy, p<0.001). Clinical outcomes at 2 years were similar: ODI 17.2±8.1 vs 18.5±8.8 (p=0.44), fusion rates 96% vs 94% (p=0.65). Operative time was longer for robotic (195±42 vs 165±38 min, p<0.01).
+
+CONCLUSION: Robotic-assisted PLIF improves screw accuracy and reduces radiation exposure with similar 2-year clinical outcomes compared to freehand technique.
+                

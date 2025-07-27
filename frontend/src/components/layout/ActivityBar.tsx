@@ -22,6 +22,7 @@ export function ActivityBar({ activeView, onViewChange, onToggleSidebar }: Activ
   const activities = [
     { id: 'research', icon: VscBeaker, tooltip: '연구 프로젝트' },
     { id: 'papers', icon: VscBook, tooltip: '논문 관리' },
+    { id: 'research-papers', icon: VscBook, tooltip: '요추 유합술 논문' },
     { id: 'editor', icon: VscNotebook, tooltip: '논문 편집기' },
     { id: 'sources', icon: VscSourceControl, tooltip: '논문 소스 관리' },
     { id: 'ai', icon: VscRobot, tooltip: 'AI 어시스턴트' },

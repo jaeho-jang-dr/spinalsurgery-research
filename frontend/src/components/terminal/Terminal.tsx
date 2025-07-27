@@ -95,15 +95,18 @@ export function Terminal({ onClose }: TerminalProps) {
       }
     })
     
+    // Store references
+    xtermRef.current = term
+    ;(terminalRef.current as any)._fitAddon = fitAddon
+    
     // Handle resize
     const handleResize = () => {
-      if (fitAddon) {
-        fitAddon.fit()
+      const addon = (terminalRef.current as any)?._fitAddon
+      if (addon) {
+        addon.fit()
       }
     }
     window.addEventListener('resize', handleResize)
-    
-    xtermRef.current = term
     
     // Store handleResize in a ref so it can be removed in cleanup
     (terminalRef.current as any)._handleResize = handleResize

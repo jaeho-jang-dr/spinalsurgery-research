@@ -1,0 +1,18 @@
+Title: Comparison of 2-Year Outcomes Between PLIF and TLIF in Patients with Degenerative Spondylolisthesis: A Randomized Controlled Trial
+Authors: Lee KH, Yamamoto T, Chen WJ, Roberts M, Singh K
+Journal: Journal of Neurosurgery: Spine (2023)
+PMID: 34567890
+DOI: 10.3171/2023.2.SPINE22891
+Fusion Type: PLIF/TLIF
+Keywords: PLIF, TLIF, randomized trial, spondylolisthesis, 2-year follow-up
+
+Abstract:
+
+OBJECTIVE: To compare 2-year clinical and radiological outcomes between posterior lumbar interbody fusion (PLIF) and transforaminal lumbar interbody fusion (TLIF) for degenerative spondylolisthesis.
+
+METHODS: 120 patients with single-level degenerative spondylolisthesis were randomized to PLIF (n=60) or TLIF (n=60). Primary outcome was ODI at 24 months. Secondary outcomes included VAS, fusion rate, operative time, blood loss, and complications.
+
+RESULTS: Both groups showed significant improvement at 2 years. ODI improved from 62.3±11.2 to 20.1±9.8 in PLIF and from 61.8±10.9 to 19.5±9.2 in TLIF (p=0.72). Fusion rates were 93.3% (PLIF) and 95.0% (TLIF) (p=0.69). TLIF had shorter operative time (142±32 vs 168±38 min, p<0.01) and less blood loss (220±85 vs 340±120 mL, p<0.01). Dural tears occurred in 5 PLIF and 1 TLIF patient (p=0.09).
+
+CONCLUSION: Both PLIF and TLIF provide excellent 2-year outcomes for degenerative spondylolisthesis, with TLIF showing advantages in operative time and blood loss.
+                

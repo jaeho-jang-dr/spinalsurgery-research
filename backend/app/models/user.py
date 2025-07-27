@@ -36,3 +36,4 @@ class User(Base):
     ai_logs = relationship("AIGenerationLog", back_populates="user", cascade="all, delete-orphan")
     statistical_analyses = relationship("StatisticalAnalysis", foreign_keys="StatisticalAnalysis.created_by", back_populates="creator")
     approved_consents = relationship("InformedConsent", foreign_keys="InformedConsent.approved_by", back_populates="approver")
+    research_papers = relationship("ResearchPaper", back_populates="user", cascade="all, delete-orphan")

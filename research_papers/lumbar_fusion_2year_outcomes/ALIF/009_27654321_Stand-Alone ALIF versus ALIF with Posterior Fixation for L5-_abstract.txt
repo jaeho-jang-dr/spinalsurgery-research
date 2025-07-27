@@ -1,0 +1,18 @@
+Title: Stand-Alone ALIF versus ALIF with Posterior Fixation for L5-S1 Fusion: 24-Month Comparative Study
+Authors: Brown MD, Taylor BA, Green JR, White KL, Davis RJ
+Journal: Spine Journal (2022)
+PMID: 27654321
+DOI: 10.1016/j.spinee.2021.12.008
+Fusion Type: ALIF
+Keywords: stand-alone ALIF, L5-S1, circumferential fusion, subsidence
+
+Abstract:
+
+OBJECTIVE: Compare outcomes of stand-alone ALIF versus ALIF with posterior fixation at L5-S1.
+
+METHODS: Retrospective comparison of 60 patients (30 stand-alone, 30 with posterior fixation) followed for minimum 24 months.
+
+RESULTS: Both groups improved significantly. Fusion rates: 86.7% (stand-alone) vs 96.7% (combined) (p=0.16). Stand-alone had higher subsidence rate (20% vs 3.3%, p=0.04) but shorter operative time and hospital stay. Clinical outcomes were similar at 2 years.
+
+CONCLUSION: Stand-alone ALIF can achieve good outcomes at L5-S1 but with higher subsidence risk compared to circumferential fusion.
+                

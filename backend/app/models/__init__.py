@@ -6,6 +6,8 @@ from app.models.collaborator import Collaborator
 from app.models.analysis import StatisticalAnalysis
 from app.models.consent import InformedConsent
 from app.models.ai_log import AIGenerationLog
+from app.models.research_paper import ResearchPaper
+from app.models.chat_session import ChatSession, ChatMessage
 
 __all__ = [
     "User",
@@ -19,4 +21,7 @@ __all__ = [
     "StatisticalAnalysis",
     "InformedConsent",
     "AIGenerationLog",
+    "ResearchPaper",
+    "ChatSession",
+    "ChatMessage",
 ]

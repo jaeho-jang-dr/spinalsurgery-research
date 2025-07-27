@@ -1,0 +1,18 @@
+Title: Two-Year Clinical and Radiological Outcomes Following Minimally Invasive Transforaminal Lumbar Interbody Fusion: A Prospective Multicenter Study
+Authors: Kim JH, Park SJ, Lee HY, Choi YS, Jung KH
+Journal: Spine Journal (2023)
+PMID: 35123456
+DOI: 10.1016/j.spinee.2023.01.001
+Fusion Type: TLIF
+Keywords: minimally invasive, TLIF, 2-year outcomes, fusion rate, prospective study
+
+Abstract:
+
+BACKGROUND: Minimally invasive transforaminal lumbar interbody fusion (MI-TLIF) has gained popularity for treating degenerative lumbar diseases. This study evaluates the 2-year clinical and radiological outcomes.
+
+METHODS: A prospective multicenter study included 156 patients who underwent single-level MI-TLIF between 2020-2021. Clinical outcomes were assessed using Visual Analog Scale (VAS), Oswestry Disability Index (ODI), and SF-36. Radiological evaluation included fusion rates, disc height, and sagittal balance parameters.
+
+RESULTS: At 2-year follow-up, VAS back pain improved from 7.2±1.8 to 2.1±1.2 (p<0.001), VAS leg pain from 7.8±1.5 to 1.8±1.1 (p<0.001), and ODI from 58.2±12.3 to 18.5±8.7 (p<0.001). Fusion rate was 94.2% at 24 months. Disc height increased from 8.2±2.1mm to 11.8±1.9mm postoperatively and maintained at 11.2±1.8mm at 2 years. Complications included 3 cases of screw loosening and 2 cases requiring revision surgery.
+
+CONCLUSION: MI-TLIF demonstrates excellent clinical outcomes and high fusion rates at 2-year follow-up with low complication rates.
+                

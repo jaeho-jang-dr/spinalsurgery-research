@@ -329,7 +329,11 @@ export const MultiTerminal: React.FC<MultiTerminalProps> = ({
         {tabs.map(tab => (
           <div
             key={tab.id}
-            ref={el => terminalRefs.current[tab.id] = el}
+            ref={el => {
+              if (el) {
+                terminalRefs.current[tab.id] = el
+              }
+            }}
             className={`absolute inset-0 ${
               activeTabId === tab.id ? 'block' : 'hidden'
             }`}

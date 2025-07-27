@@ -19,6 +19,7 @@ export default function AIPage() {
           <nav className="flex items-center space-x-6">
             <Link href="/research" className="hover:text-white transition-colors">연구</Link>
             <Link href="/papers" className="hover:text-white transition-colors">논문</Link>
+            <Link href="/research-papers" className="hover:text-white transition-colors">요추 유합술 논문</Link>
             <Link href="/data" className="hover:text-white transition-colors">데이터</Link>
             <Link href="/ai" className="text-white">AI</Link>
             <Link href="/settings" className="hover:text-white transition-colors">설정</Link>

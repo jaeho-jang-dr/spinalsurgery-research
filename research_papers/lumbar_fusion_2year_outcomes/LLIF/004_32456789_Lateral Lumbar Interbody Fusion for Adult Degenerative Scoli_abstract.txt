@@ -1,0 +1,18 @@
+Title: Lateral Lumbar Interbody Fusion for Adult Degenerative Scoliosis: 2-Year Clinical and Radiographic Outcomes
+Authors: Park JY, Kim SW, Chang HG, Lee SH, Cho BC
+Journal: Spine (2022)
+PMID: 32456789
+DOI: 10.1097/BRS.0000000000004123
+Fusion Type: LLIF
+Keywords: LLIF, adult degenerative scoliosis, deformity correction, 2-year outcomes
+
+Abstract:
+
+PURPOSE: To evaluate 2-year outcomes of lateral lumbar interbody fusion (LLIF) for adult degenerative scoliosis (ADS).
+
+METHODS: 45 patients with ADS underwent LLIF with posterior instrumentation. Mean age was 68.2±7.3 years. Clinical outcomes (VAS, ODI, SRS-22) and radiographic parameters were assessed.
+
+RESULTS: Coronal Cobb angle improved from 28.3±8.2° to 12.1±5.3° (p<0.001). Lumbar lordosis increased from 25.3±11.2° to 45.2±9.8° (p<0.001). VAS back pain decreased from 7.5±1.3 to 2.8±1.5, ODI from 62.1±10.5 to 24.3±11.2 (both p<0.001). SRS-22 scores improved in all domains. Fusion rate was 91.1% at 2 years. Complications included 4 transient thigh numbness, 2 hip flexor weakness, and 1 infection.
+
+CONCLUSION: LLIF effectively corrects deformity and improves clinical outcomes in ADS patients at 2-year follow-up.
+                

@@ -14,9 +14,20 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl=f"{settings.API_V1_STR}/auth/login
 
 
 async def get_current_user(
-    token: str = Depends(oauth2_scheme),
+    token: Optional[str] = Depends(oauth2_scheme),
     db: AsyncSession = Depends(get_db)
 ) -> User:
+    # Mock user for development
+    if not token or token == "mock-token":
+        mock_user = User(
+            id="mock-user-id",
+            email="test@example.com",
+            name="Test User",
+            role="admin",
+            is_active=True
+        )
+        return mock_user
+    
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",

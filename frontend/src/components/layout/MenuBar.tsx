@@ -3,15 +3,22 @@
 import { useState, useRef, useEffect } from 'react'
 import { VscChevronRight } from '../icons'
 
-interface MenuItem {
+type MenuItemBase = {
   label: string
   accelerator?: string
   action?: () => void
-  submenu?: MenuItem[]
-  separator?: boolean
+  submenu?: MenuItemWithSeparator[]
   checked?: boolean
   enabled?: boolean
 }
+
+type MenuSeparator = {
+  separator: true
+}
+
+type MenuItemWithSeparator = MenuItemBase | MenuSeparator
+
+interface MenuItem extends MenuItemBase {}
 
 interface MenuBarProps {
   onMenuAction?: (action: string) => void
@@ -22,7 +29,7 @@ export function MenuBar({ onMenuAction }: MenuBarProps) {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null)
   const menuBarRef = useRef<HTMLDivElement>(null)
 
-  const menus: Record<string, MenuItem[]> = {
+  const menus: Record<string, MenuItemWithSeparator[]> = {
     File: [
       { label: 'New Text File', accelerator: 'Ctrl+N', action: () => onMenuAction?.('file.new') },
       { label: 'New File...', accelerator: 'Ctrl+Alt+Windows+N', action: () => onMenuAction?.('file.newFile') },
@@ -282,35 +289,37 @@ export function MenuBar({ onMenuAction }: MenuBarProps) {
     }
   }
 
-  const renderMenuItem = (item: MenuItem, index: number, parentKey: string) => {
-    if (item.separator) {
+  const renderMenuItem = (item: MenuItemWithSeparator, index: number, parentKey: string) => {
+    if ('separator' in item && item.separator) {
       return <div key={`${parentKey}-separator-${index}`} className="menu-separator" />
     }
 
-    const hasSubmenu = item.submenu && item.submenu.length > 0
-    const itemKey = `${parentKey}-${item.label}`
+    // Type assertion since we know it's not a separator at this point
+    const menuItem = item as MenuItemBase
+    const hasSubmenu = menuItem.submenu && menuItem.submenu.length > 0
+    const itemKey = `${parentKey}-${menuItem.label}`
 
     return (
       <div
         key={itemKey}
-        className={`menu-item ${hasSubmenu ? 'has-submenu' : ''} ${item.enabled === false ? 'disabled' : ''}`}
+        className={`menu-item ${hasSubmenu ? 'has-submenu' : ''} ${menuItem.enabled === false ? 'disabled' : ''}`}
         onMouseEnter={() => hasSubmenu && setOpenSubmenu(itemKey)}
-        onClick={() => !hasSubmenu && handleMenuItemClick(item)}
+        onClick={() => !hasSubmenu && handleMenuItemClick(menuItem)}
       >
         <span className="menu-item-label">
-          {item.checked !== undefined && (
-            <span className="menu-item-check">{item.checked ? '✓' : ''}</span>
+          {menuItem.checked !== undefined && (
+            <span className="menu-item-check">{menuItem.checked ? '✓' : ''}</span>
           )}
-          {item.label}
+          {menuItem.label}
         </span>
-        {item.accelerator && (
-          <span className="menu-item-accelerator">{item.accelerator}</span>
+        {menuItem.accelerator && (
+          <span className="menu-item-accelerator">{menuItem.accelerator}</span>
         )}
         {hasSubmenu && <VscChevronRight className="menu-item-arrow" />}
         
         {hasSubmenu && openSubmenu === itemKey && (
           <div className="submenu">
-            {item.submenu!.map((subItem, subIndex) => 
+            {menuItem.submenu!.map((subItem, subIndex) => 
               renderMenuItem(subItem, subIndex, itemKey)
             )}
           </div>

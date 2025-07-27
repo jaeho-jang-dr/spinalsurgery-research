@@ -1,28 +1,55 @@
 import httpx
 from typing import Dict, List, Optional
-from langchain.llms import Ollama
-from langchain.prompts import PromptTemplate
-from langchain.chains import LLMChain
-from langchain.embeddings import OllamaEmbeddings
-from chromadb import Client as ChromaClient
-from chromadb.config import Settings
 import json
 from datetime import datetime
+import os
 
 from app.core.config import settings
+
+# Try to import Ollama, fallback to mock if not available
+try:
+    from langchain_community.llms import Ollama
+    from langchain_community.embeddings import OllamaEmbeddings
+    from langchain.prompts import PromptTemplate
+    from langchain.chains import LLMChain
+    import chromadb
+    from chromadb.config import Settings
+    OLLAMA_AVAILABLE = True
+except ImportError:
+    OLLAMA_AVAILABLE = False
+    print("Warning: Ollama/LangChain not available, using mock AI service")
 
 
 class AIService:
     def __init__(self):
-        self.ollama = Ollama(
-            base_url=settings.OLLAMA_BASE_URL,
-            model="llama2"
-        )
-        self.embeddings = OllamaEmbeddings(
-            base_url=settings.OLLAMA_BASE_URL,
-            model="llama2"
-        )
-        self.chroma = ChromaClient(Settings(anonymized_telemetry=False))
+        self.ollama_available = False
+        self.model = "llama2"
+        
+        if OLLAMA_AVAILABLE:
+            try:
+                # Try to connect to Ollama
+                import httpx
+                response = httpx.get(f"{settings.OLLAMA_BASE_URL}/api/tags", timeout=2.0)
+                if response.status_code == 200:
+                    self.ollama = Ollama(
+                        base_url=settings.OLLAMA_BASE_URL,
+                        model=self.model
+                    )
+                    self.embeddings = OllamaEmbeddings(
+                        base_url=settings.OLLAMA_BASE_URL,
+                        model=self.model
+                    )
+                    self.chroma = chromadb.Client(Settings(anonymized_telemetry=False))
+                    self.ollama_available = True
+                    print(f"Connected to Ollama at {settings.OLLAMA_BASE_URL}")
+            except Exception as e:
+                print(f"Failed to connect to Ollama: {e}")
+        
+        if not self.ollama_available:
+            # Use mock service
+            from app.services.mock_ai_service import mock_ai_service
+            self.mock_service = mock_ai_service
+            print("Using mock AI service")
         
     async def generate_paper_draft(
         self,
@@ -30,9 +57,18 @@ class AIService:
         field: str,
         keywords: List[str],
         details: str,
-        references: List[Dict]
+        references: List[Dict] = None
     ) -> Dict:
         """Generate paper draft using AI"""
+        
+        if not self.ollama_available:
+            return await self.mock_service.generate_paper_draft(
+                title=title,
+                field=field,
+                keywords=keywords,
+                details=details,
+                references=references
+            )
         
         prompt_template = """
         You are a medical research assistant specializing in {field}.
@@ -79,7 +115,7 @@ class AIService:
             "discussion": sections.get("discussion", ""),
             "conclusion": sections.get("conclusion", ""),
             "generated_at": datetime.utcnow().isoformat(),
-            "model": "ollama/llama2"
+            "model": f"ollama/{self.model}"
         }
     
     async def generate_informed_consent(
@@ -91,6 +127,15 @@ class AIService:
         benefits: str
     ) -> str:
         """Generate informed consent document"""
+        
+        if not self.ollama_available:
+            return await self.mock_service.generate_informed_consent(
+                project_title=project_title,
+                field=field,
+                procedures=procedures,
+                risks=risks,
+                benefits=benefits
+            )
         
         prompt_template = """
         Generate an informed consent form for a medical research study.
@@ -139,6 +184,13 @@ class AIService:
     ) -> Dict:
         """Generate statistical analysis plan"""
         
+        if not self.ollama_available:
+            return await self.mock_service.analyze_statistics(
+                data_description=data_description,
+                analysis_type=analysis_type,
+                variables=variables
+            )
+        
         prompt_template = """
         As a biostatistician, create a statistical analysis plan for the following research:
         
@@ -180,6 +232,13 @@ class AIService:
         limit: int = 10
     ) -> List[Dict]:
         """Search for similar papers using embeddings"""
+        
+        if not self.ollama_available:
+            return await self.mock_service.search_similar_papers(
+                title=title,
+                abstract=abstract,
+                limit=limit
+            )
         
         # Create or get collection
         collection = self.chroma.get_or_create_collection(

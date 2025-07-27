@@ -5,6 +5,7 @@ from contextlib import asynccontextmanager
 from app.api.v1.api import api_router
 from app.core.config import settings
 from app.core.database import engine
+from app.middleware.rate_limit import RateLimitMiddleware
 
 
 @asynccontextmanager
@@ -34,6 +35,10 @@ app.add_middleware(
     allow_headers=["*"],
     expose_headers=["*"],
 )
+
+# Add rate limiting middleware for AI endpoints
+# 30 requests per minute for AI endpoints
+app.add_middleware(RateLimitMiddleware, calls=30, period=60)
 
 # Include API router
 app.include_router(api_router, prefix=settings.API_V1_STR)

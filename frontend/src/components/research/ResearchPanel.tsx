@@ -106,15 +106,15 @@ export function ResearchPanel() {
       switch (action) {
         case 'pause':
           await api.pauseSearchJob(jobId)
-          toast.info('검색이 일시정지되었습니다')
+          toast('검색이 일시정지되었습니다', { icon: 'ℹ️' })
           break
         case 'resume':
           await api.resumeSearchJob(jobId)
-          toast.info('검색이 재개되었습니다')
+          toast('검색이 재개되었습니다', { icon: 'ℹ️' })
           break
         case 'cancel':
           await api.cancelSearchJob(jobId)
-          toast.info('검색이 취소되었습니다')
+          toast('검색이 취소되었습니다', { icon: 'ℹ️' })
           stopSearchMonitoring(jobId)
           break
       }
@@ -155,7 +155,7 @@ export function ResearchPanel() {
       
       // AI 옵션에 따른 처리
       if (data.aiOption === 'search') {
-        toast.info('논문 검색을 시작합니다...')
+        toast('논문 검색을 시작합니다...', { icon: 'ℹ️' })
         
         try {
           // 검색 사이트 가져오기
@@ -193,7 +193,7 @@ export function ResearchPanel() {
           }
         }
       } else if (data.aiOption === 'complete') {
-        toast.info('완전 자동 연구를 시작합니다...')
+        toast('완전 자동 연구를 시작합니다...', { icon: 'ℹ️' })
         
         try {
           // Start complete AI research workflow
@@ -207,7 +207,7 @@ export function ResearchPanel() {
           
           if (researchResponse.data.status === 'completed') {
             toast.success('연구 프로젝트가 성공적으로 생성되었습니다!')
-            toast.info(`프로젝트 ID: ${researchResponse.data.project_id}`)
+            toast(`프로젝트 ID: ${researchResponse.data.project_id}`, { icon: 'ℹ️' })
             
             // Show results summary
             const outputs = researchResponse.data.outputs
@@ -218,7 +218,7 @@ export function ResearchPanel() {
           toast.error('완전 자동 연구에 실패했습니다')
         }
       } else {
-        toast.info(`${data.aiOption} 기능은 준비 중입니다`)
+        toast(`${data.aiOption} 기능은 준비 중입니다`, { icon: 'ℹ️' })
       }
     } catch (error) {
       console.error('Failed to create project:', error)
@@ -231,7 +231,7 @@ export function ResearchPanel() {
     
     try {
       if (data.aiOption === 'search') {
-        toast.info('논문 검색을 시작합니다...')
+        toast('논문 검색을 시작합니다...', { icon: 'ℹ️' })
         
         // 검색 사이트 가져오기
         const sitesResponse = await api.getSearchSites()
@@ -259,7 +259,7 @@ export function ResearchPanel() {
           fetchSearchSessions(currentProject.id)
         }
       } else if (data.aiOption === 'complete') {
-        toast.info('완전 자동 연구를 시작합니다...')
+        toast('완전 자동 연구를 시작합니다...', { icon: 'ℹ️' })
         
         try {
           // Start complete AI research workflow
@@ -273,7 +273,7 @@ export function ResearchPanel() {
           
           if (researchResponse.data.status === 'completed') {
             toast.success('연구가 성공적으로 완료되었습니다!')
-            toast.info(`프로젝트 ID: ${researchResponse.data.project_id}`)
+            toast(`프로젝트 ID: ${researchResponse.data.project_id}`, { icon: 'ℹ️' })
             
             // Show results summary
             const outputs = researchResponse.data.outputs
@@ -286,7 +286,7 @@ export function ResearchPanel() {
           toast.error('완전 자동 연구에 실패했습니다')
         }
       } else {
-        toast.info(`${data.aiOption} 기능은 준비 중입니다`)
+        toast(`${data.aiOption} 기능은 준비 중입니다`, { icon: 'ℹ️' })
       }
     } catch (error: any) {
       console.error('Failed to start research:', error)

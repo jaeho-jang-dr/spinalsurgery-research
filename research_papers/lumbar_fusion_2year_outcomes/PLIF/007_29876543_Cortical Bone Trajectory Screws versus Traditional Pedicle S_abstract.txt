@@ -1,0 +1,18 @@
+Title: Cortical Bone Trajectory Screws versus Traditional Pedicle Screws in Lumbar Fusion: 2-Year Outcomes from a Randomized Trial
+Authors: Tanaka M, Fujiwara K, Uotani K, Mori T, Yoshida M
+Journal: Journal of Bone and Joint Surgery (2023)
+PMID: 29876543
+DOI: 10.2106/JBJS.22.00987
+Fusion Type: PLIF
+Keywords: cortical bone trajectory, pedicle screws, randomized trial, muscle preservation
+
+Abstract:
+
+PURPOSE: Compare 2-year outcomes between cortical bone trajectory (CBT) and traditional pedicle screw (PS) techniques in lumbar fusion.
+
+METHODS: 140 patients randomized to CBT-PLIF (n=70) or PS-PLIF (n=70). Outcomes included fusion rates, clinical scores, and adjacent segment degeneration (ASD).
+
+RESULTS: Fusion rates were similar (CBT 92.9% vs PS 94.3%, p=0.73). Clinical outcomes improved significantly in both groups without between-group differences. CBT had less blood loss (180±65 vs 280±95 mL, p<0.01) and muscle damage markers. ASD developed in 11.4% (CBT) vs 20.0% (PS) at 2 years (p=0.16).
+
+CONCLUSION: CBT screws provide comparable fusion rates and clinical outcomes to traditional pedicle screws with potential advantages in blood loss and muscle preservation.
+                

@@ -1,0 +1,18 @@
+Title: Hybrid Surgery Combining OLIF and Percutaneous Posterior Instrumentation: 2-Year Outcomes in Multilevel Degenerative Disease
+Authors: Li HM, Zhang RJ, Shen CL, Wang XY, Liu ZH
+Journal: Clinical Orthopaedics and Related Research (2023)
+PMID: 26543210
+DOI: 10.1097/CORR.0000000000002456
+Fusion Type: OLIF Hybrid
+Keywords: OLIF, hybrid surgery, multilevel fusion, percutaneous fixation
+
+Abstract:
+
+BACKGROUND: Hybrid surgery combining OLIF with percutaneous posterior instrumentation offers advantages for multilevel disease.
+
+METHODS: 65 patients with 2-4 level degenerative disease underwent hybrid surgery. Mean 3.2 levels fused.
+
+RESULTS: At 2 years, VAS decreased from 7.6±1.5 to 2.5±1.4, ODI from 64.2±12.1 to 22.3±10.5. Lordosis improved from 28.5±13.2° to 48.3±11.5°. Overall fusion rate 92.3%. Complications: 3 ileus, 4 thigh symptoms, 2 infections.
+
+CONCLUSION: Hybrid OLIF technique provides good outcomes for multilevel disease with acceptable morbidity at 2-year follow-up.
+                

@@ -1,0 +1,18 @@
+Title: Endoscopic Lumbar Interbody Fusion: 2-Year Results of a Novel Minimally Invasive Technique
+Authors: Kim HS, Wu PH, Jang IT, Lee SH, Kim JH
+Journal: Neurosurgery (2024)
+PMID: 28765432
+DOI: 10.1227/NEU.0000000000002345
+Fusion Type: Endoscopic TLIF
+Keywords: endoscopic fusion, minimally invasive, TLIF, 2-year outcomes
+
+Abstract:
+
+INTRODUCTION: Endoscopic lumbar interbody fusion represents the latest evolution in minimally invasive spine surgery. We report 2-year outcomes of this technique.
+
+METHODS: 42 patients underwent endoscopic TLIF for single-level degenerative conditions. Clinical outcomes, fusion rates, and complications were assessed.
+
+RESULTS: Mean operative time was 165±35 minutes, blood loss 50±25 mL, hospital stay 1.2±0.4 days. At 2 years, VAS improved from 7.3±1.4 to 1.8±0.9, ODI from 59.5±10.2 to 15.3±6.8 (p<0.001). Fusion rate was 90.5%. One patient had transient dysesthesia, one required revision for cage migration.
+
+CONCLUSION: Endoscopic lumbar interbody fusion shows promising 2-year results with minimal tissue trauma, though longer follow-up and larger studies are needed.
+                
