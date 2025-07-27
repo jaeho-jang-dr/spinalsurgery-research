@@ -1,3 +1,3 @@
-from . import auth, users, projects, papers, ai, search, ai_chat, research_papers, ai_advanced
+from . import auth, users, projects, papers, ai, search, mock_auth, ai_chat, research_papers, ai_advanced, paper_download, superclaude, claude_code_search, lumbar_fusion_papers, file_browser, superclaude_enhanced, superclaude_unified
 
-__all__ = ["auth", "users", "projects", "papers", "ai", "search", "ai_chat", "research_papers", "ai_advanced"]
+__all__ = ["auth", "users", "projects", "papers", "ai", "search", "mock_auth", "ai_chat", "research_papers", "ai_advanced", "paper_download", "superclaude", "claude_code_search", "lumbar_fusion_papers", "file_browser", "superclaude_enhanced", "superclaude_unified"]

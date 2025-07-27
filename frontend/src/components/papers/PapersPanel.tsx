@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { VscSearch, VscAdd, VscBook, VscArchive, VscFile } from '../icons'
+import { VscSearch, VscAdd, VscBook, VscArchive, VscFile, VscCloudDownload } from '../icons'
+import { PaperDownloader } from './PaperDownloader'
 
 export function PapersPanel() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -50,6 +51,14 @@ export function PapersPanel() {
               <VscBook className="mr-1" size={16} />
               참고문헌
             </button>
+          </div>
+          
+          {/* TFESI Papers Link */}
+          <div className="mt-3">
+            <a href="/papers/tfesi" className="vscode-button-secondary w-full text-center block">
+              <VscCloudDownload className="inline-block mr-1" size={16} />
+              TFESI 논문 보기
+            </a>
           </div>
         </div>
         

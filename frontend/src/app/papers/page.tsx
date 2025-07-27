@@ -1,10 +1,16 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { PapersPanel } from '@/components/papers/PapersPanel'
+import { PaperDownloader } from '@/components/papers/PaperDownloader'
+import { ClaudeCodeSearchPanel } from '@/components/papers/ClaudeCodeSearchPanel'
+import { VscBook, VscCloud } from '@/components/icons'
+import { Download, Code } from 'lucide-react'
 
 export default function PapersPage() {
+  const [activeView, setActiveView] = useState<'manage' | 'download' | 'claude-code'>('manage')
+
   return (
     <div className="min-h-screen bg-[#1e1e1e] text-gray-300">
       {/* VS Code 스타일 헤더 */}
@@ -26,8 +32,56 @@ export default function PapersPage() {
         </div>
       </header>
 
-      <main className="flex h-[calc(100vh-60px)]">
-        <PapersPanel />
+      <main className="flex flex-col h-[calc(100vh-60px)]">
+        {/* Tab Navigation */}
+        <div className="bg-[#252526] border-b border-[#3e3e42]">
+          <div className="flex px-6">
+            <button
+              onClick={() => setActiveView('manage')}
+              className={`px-4 py-2 flex items-center gap-2 border-b-2 transition-colors ${
+                activeView === 'manage' 
+                  ? 'border-[#007acc] text-[#007acc]' 
+                  : 'border-transparent hover:text-white'
+              }`}
+            >
+              <VscBook size={16} />
+              논문 관리
+            </button>
+            <button
+              onClick={() => setActiveView('download')}
+              className={`px-4 py-2 flex items-center gap-2 border-b-2 transition-colors ${
+                activeView === 'download' 
+                  ? 'border-[#007acc] text-[#007acc]' 
+                  : 'border-transparent hover:text-white'
+              }`}
+            >
+              <Download size={16} />
+              논문 검색 및 다운로드
+            </button>
+            <button
+              onClick={() => setActiveView('claude-code')}
+              className={`px-4 py-2 flex items-center gap-2 border-b-2 transition-colors ${
+                activeView === 'claude-code' 
+                  ? 'border-[#007acc] text-[#007acc]' 
+                  : 'border-transparent hover:text-white'
+              }`}
+            >
+              <Code size={16} />
+              Claude Code 검색
+            </button>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 overflow-hidden">
+          {activeView === 'manage' ? (
+            <PapersPanel />
+          ) : activeView === 'download' ? (
+            <PaperDownloader />
+          ) : (
+            <ClaudeCodeSearchPanel />
+          )}
+        </div>
       </main>
     </div>
   )

@@ -1,0 +1,18 @@
+논문 정보
+================================================================================
+제목 (한글): 체계 융합이 있거나없는 후측 요추 융합의 장기 결과 : 체계적인 검토 및 메타 분석
+제목 (영문): Long-term outcomes of posterolateral lumbar fusion with and without interbody fusion: A systematic review and meta-analysis
+
+저자: Jin-Ho Park, Sung-Min Kim, Jae-Hyun Lee, Chang-Hoon Kim
+저널: Spine Journal
+연도: 2024
+DOI: 10.1016/j.spinee.2024.01.012
+PMID: PMC9876543
+
+초록 (한글)
+================================================================================
+배경 : 후측 요추 융합 (PLF)은 요추 퇴행성 질환을 치료하기위한 기본적인 외과 기술로 남아 있습니다. 이 체계적인 검토는 PLF 단독과 PLF 간의 장기 결과를 체간 융합과 비교하는 것을 목표로했다.
+
+초록 (영문)
+================================================================================
+BACKGROUND: Posterolateral lumbar fusion (PLF) remains a fundamental surgical technique for treating lumbar degenerative diseases. This systematic review aimed to compare long-term outcomes between PLF alone and PLF with interbody fusion.

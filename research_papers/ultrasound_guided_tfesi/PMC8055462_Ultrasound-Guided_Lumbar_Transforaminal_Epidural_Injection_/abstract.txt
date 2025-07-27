@@ -1,0 +1,82 @@
+# Ultrasound-Guided Lumbar Transforaminal Epidural Injection: A Narrative Review
+
+**PMC ID**: PMC8055462  
+**PMID**: 32521947  
+**Journal**: Asian Spine Journal  
+**Year**: 2021  
+**Authors**: Khandelwal A, Ahuja A, Kumar A
+
+## Abstract
+
+Transforaminal epidural steroid injection is traditionally performed under fluoroscopic guidance. However, ultrasound-guided transforaminal injection (USTFI) has emerged as a promising alternative offering several advantages:
+
+- No radiation exposure
+- No requirement for specialized procedure area  
+- Equipment mobility and accessibility
+- Real-time visualization of soft tissue structures and needle trajectory
+
+This narrative review describes the indexed articles published on USTFI and ultrasound-guided selective nerve root block (SNRB) to evaluate current evidence on the best approach to perform the block.
+
+## Key Findings
+
+### 1. Technical Approaches
+
+**Axial Approach**
+- Probe placed perpendicular to the spine
+- Good for visualizing transverse processes
+
+**Parasagittal Approach**  
+- Probe placed parallel to the spine
+- Most commonly used in studies
+- Better for following needle trajectory
+
+**Combined Approach**
+- Uses both orientations for optimal visualization
+- May improve accuracy
+
+### 2. Advantages of Ultrasound Guidance
+
+- **Radiation Safety**: Complete elimination of radiation exposure for both patient and practitioner
+- **Accessibility**: Can be performed at bedside or in any clinical setting
+- **Real-time Imaging**: Dynamic visualization of needle advancement and surrounding structures
+- **Vascular Safety**: Ability to identify blood vessels and avoid intravascular injection
+- **Cost-effectiveness**: No need for specialized fluoroscopy suite
+
+### 3. Limitations and Challenges
+
+- **Acoustic Shadowing**: Difficulty visualizing needle tip due to bony structures blocking ultrasound waves
+- **Learning Curve**: Requires specific training and experience
+- **Limited Evidence**: Small sample sizes in most published studies
+- **Depth Limitations**: Challenges in obese patients or deeper spinal levels
+- **Lack of Standardization**: No consensus on optimal technique
+
+### 4. Current Evidence Status
+
+Through literature search, the review found:
+- 8 articles and 1 case report on USTFI
+- 5 articles on ultrasound-guided SNRB
+- Most studies had small sample sizes
+- Limited data on contrast spread patterns
+- Accuracy rates reported around 90% when confirmed with fluoroscopy
+
+## Conclusion
+
+While ultrasound-guided lumbar transforaminal epidural injection shows promise as a radiation-free alternative to fluoroscopic guidance, the current evidence base remains limited. The technique offers clear advantages in terms of safety and accessibility, but requires further validation through larger studies.
+
+The authors recommend:
+1. Larger sample size studies
+2. Standardized technique descriptions
+3. Analysis of dye spread patterns
+4. Comparison studies with fluoroscopic guidance
+5. Long-term outcome assessments
+
+"Further studies with larger sample size and description of dye spread patterns are recommended to come to a more definite conclusion."
+
+## Clinical Implications
+
+For practitioners considering USTFI:
+- Adequate training is essential
+- Consider using fluoroscopic confirmation initially
+- Patient selection is important (avoid in obese patients initially)
+- Combine approaches for optimal visualization
+- Maintain awareness of technique limitations

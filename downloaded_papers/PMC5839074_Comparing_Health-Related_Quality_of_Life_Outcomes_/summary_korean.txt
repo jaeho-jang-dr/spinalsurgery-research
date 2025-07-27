@@ -1,0 +1,46 @@
+================================================================================
+논문 정보 (Paper Information)
+================================================================================
+
+제목 (English): Comparing Health-Related Quality of Life Outcomes in Patients Undergoing Either Primary or Revision Anterior Cervical Discectomy and Fusion
+제목 (Korean): 1 차 또는 전방 자궁 경부 불일치 및 융합을 겪고있는 환자의 건강 관련 삶의 질 성과 비교
+
+저자: Andrew K Chan, Vedat Deviren, Christopher P Ames
+저널: Spine (Phila Pa 1976)
+연도: 2018
+DOI: 10.1097/BRS.0000000000002342
+PMID: PMC5839074
+
+================================================================================
+초록 (Abstract)
+================================================================================
+
+[한글 번역]
+연구 설계 : 후 향적 비교 코호트 연구. 목적 : 1 차 또는 전방 자궁 경부 불일치 및 융합 (ACDF)을 겪고있는 환자에 대한 건강 관련 삶의 질 (HRQOL) 결과를 비교합니다.
+
+[Original English]
+STUDY DESIGN: Retrospective comparative cohort study. OBJECTIVE: To compare health-related quality of life (HRQOL) outcomes for patients undergoing either primary or revision anterior cervical discectomy and fusion (ACDF)...
+
+================================================================================
+본문 미리보기 (Content Preview)
+================================================================================
+
+--- 페이지 1 ---
+Scipost 물리학 제출
+경계 혼란 : 정확한 얽힘 역학
+F. Fritzsch 1*, R. Ghosh 1,2, T. Prosen 1
+1 물리학과, 수학 및 물리학 학부, 류블 랴나 대학교,
+Ljubljana, 슬로베니아
+2 University College, London, United의 물리 및 천문학과
+왕국
+* felix.fritzsch@fmf.uni-lj.si
+2023 년 6 월 2 일
+추상적인
+우리는 최소 설정 ER-에서 얽힘의 역학을 계산합니다.
+우리가 이전에 더빙했던 양자와 혼합 양자 다수 역학
+경계 혼란. 이것은 자유롭고 상호 상영되지 않는 벽돌 작품 양자로 구성됩니다
+혼돈과 에르고 틱성이 불순물 상호 작용에 의해 유도되는 회로,
+즉, 얽힌 2 쿼트 게이트는 시스템 경계에 배치됩니다. 우리는 com-
+에 대한 기존의 양이파르트 얽힘 엔트로피를 모두 퍼팅
+초기 제품에 대한 불순물 상호 작용을 포함한 연결된 서브 시스템
+주뿐만 아니라 초기 지역의 소...

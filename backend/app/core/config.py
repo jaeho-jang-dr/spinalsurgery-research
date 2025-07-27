@@ -39,6 +39,9 @@ class Settings(BaseSettings):
         "http://localhost:3000",
         "http://localhost:3001",
         "http://localhost:8000",
+        "ws://localhost:3000",
+        "ws://localhost:3001",
+        "ws://localhost:8000",
     ]
     
     @field_validator("BACKEND_CORS_ORIGINS", mode="before")

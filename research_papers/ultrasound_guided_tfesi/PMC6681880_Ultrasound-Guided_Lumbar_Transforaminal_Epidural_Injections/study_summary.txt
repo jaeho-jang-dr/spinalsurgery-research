@@ -1,0 +1,104 @@
+# Ultrasound-Guided Lumbar Transforaminal Epidural Injections: A Single Center Fluoroscopic Validation Study
+
+**PMC ID**: PMC6681880  
+**PMID**: 31357637  
+**Journal**: Journal of Clinical Medicine  
+**Year**: 2019  
+**Authors**: Jee H, Lee JH, Kim J, Park KD, Lee WY, Park Y
+
+## Abstract
+
+**Objective**: To investigate the success rate (technical precision) of ultrasound-guided lumbar transforaminal epidural steroid injection by validating the results with conventional fluoroscopic technique.
+
+## Methodology
+
+### Study Design
+- Prospective validation study
+- Single center
+- Fluoroscopic confirmation of ultrasound-guided technique
+
+### Participants
+- **Sample Size**: 20 patients
+- **Inclusion Criteria**: Unilateral single-level lumbar foraminal disc protrusion
+- **Exclusion Criteria**: Not specified in the summary
+
+### Technical Approach
+1. **Ultrasound Guidance**:
+   - Used axial view for needle positioning
+   - Real-time visualization during needle advancement
+   - 22-gauge spinal needle
+
+2. **Validation Method**:
+   - Fluoroscopic confirmation after ultrasound-guided placement
+   - Contrast dye injection to verify epidural spread
+   - Assessment of technical accuracy
+
+### Outcome Measures
+- Primary: Technical accuracy rate (successful epidural placement)
+- Secondary: Complication rates
+
+## Results
+
+### Overall Accuracy
+- **Overall Success Rate**: 90% (18/20 patients)
+- **Failed Cases**: 2 patients (10%)
+
+### Success Rates by Spinal Level
+| Level | Success Rate | Cases |
+|-------|--------------|-------|
+| L3-L4 | 100%        | All successful |
+| L4-L5 | 80%         | 2 failures |
+| L5-S1 | 100%        | All successful |
+
+### Safety Profile
+- **Complications**: None reported
+- **Adverse Events**: 0%
+
+### Technical Observations
+- Both failed cases occurred at the L4-L5 level
+- L5-S1 level showed the highest reliability
+- No vascular punctures or nerve injuries
+
+## Key Findings
+
+### 1. Clinical Feasibility
+- Ultrasound guidance is accurate and feasible in clinical settings
+- 90% accuracy rate comparable to fluoroscopy-only techniques
+- No specialized radiology suite required
+
+### 2. Advantages Demonstrated
+- **Radiation-Free**: Complete elimination of radiation exposure
+- **Real-Time Visualization**: Dynamic needle tracking
+- **Soft Tissue Imaging**: Better visualization of:
+  - Nerve roots
+  - Blood vessels
+  - Surrounding muscles
+- **Patient Positioning**: Can be performed in lateral decubitus position
+
+### 3. Technical Considerations
+- L4-L5 level may be more challenging
+- Axial view provides adequate visualization
+- Contrast validation confirms accurate placement
+
+### 4. Clinical Implications
+- Viable alternative to fluoroscopy-guided injections
+- Particularly useful for:
+  - Pregnant patients
+  - Patients requiring multiple injections
+  - Settings without fluoroscopy access
+
+## Limitations
+- Small sample size (n=20)
+- Single center study
+- No long-term outcome data
+- No comparison of clinical efficacy
+
+## Conclusion
+
+The study demonstrates that ultrasound-guided lumbar transforaminal epidural injections are "accurate and feasible in clinical setting with an accuracy of 90% and no complications." This technique offers a radiation-free alternative to traditional fluoroscopy-guided procedures while maintaining high technical success rates.
+
+## Recommendations for Practice
+1. Consider ultrasound guidance as first-line approach
+2. Be aware of potential challenges at L4-L5 level
+3. Use fluoroscopic backup if available for difficult cases
+4. Ensure adequate training before implementation

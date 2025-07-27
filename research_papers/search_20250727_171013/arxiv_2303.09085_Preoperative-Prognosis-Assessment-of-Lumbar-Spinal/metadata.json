@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "Preoperative Prognosis Assessment of Lumbar Spinal Surgery for Low Back\n  Pain and Sciatica Patients based on Multimodalities and Multimodal Learning",
+  "abstract": "Low back pain (LBP) and sciatica may require surgical therapy when they are\nsymptomatic of severe pain. However, there is no effective measures to evaluate\nthe surgical outcomes in advance. This work combined elements of Eastern\nmedicine and machine learning, and developed a preoperative assessment tool to\npredict the prognosis of lumbar spinal surgery in LBP and sciatica patients.\nStandard operative assessments, traditional Chinese medicine body constitution\nassessments, planned surgical approach, and vowel pronunciation recordings were\ncollected and stored in different modalities. Our work provides insights into\nleveraging modality combinations, multimodals, and fusion strategies. The\ninterpretability of models and correlations between modalities were also\ninspected. Based on the recruited 105 patients, we found that combining\nstandard operative assessments, body constitution assessments, and planned\nsurgical approach achieved the best performance in 0.81 accuracy. Our approach\nis effective and can be widely applied in general practice due to simplicity\nand effective.",
+  "authors": [
+    "Li-Chin Chen",
+    "Jung-Nien Lai",
+    "Hung-En Lin",
+    "Hsien-Te Chen",
+    "Kuo-Hsuan Hung",
+    "Yu Tsao"
+  ],
+  "year": "2023",
+  "pdf_url": "https://arxiv.org/pdf/2303.09085.pdf",
+  "arxiv_id": "2303.09085",
+  "id": "arxiv_2303.09085",
+  "pdf_path": "/home/drjang00/DevEnvironments/spinalsurgery-research/research_papers/search_20250727_171013/arxiv_2303.09085_Preoperative-Prognosis-Assessment-of-Lumbar-Spinal/arxiv_2303.09085.pdf",
+  "pdf_downloaded": true
+}

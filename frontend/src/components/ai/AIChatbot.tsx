@@ -9,6 +9,9 @@ interface Message {
   role: 'user' | 'assistant'
   content: string
   timestamp: string
+  enhanced?: boolean
+  persona?: string
+  thinkingSteps?: number
 }
 
 export default function AIChatbot() {
@@ -19,6 +22,7 @@ export default function AIChatbot() {
   const [availableModels, setAvailableModels] = useState<any[]>([])
   const [selectedModel, setSelectedModel] = useState('llama2')
   const [loadingModels, setLoadingModels] = useState(false)
+  const [enhancedMode, setEnhancedMode] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const scrollToBottom = () => {
@@ -68,7 +72,8 @@ export default function AIChatbot() {
       const response = await api.sendAIChat({
         message: userMessage,
         session_id: sessionId || undefined,
-        model: selectedModel
+        model: selectedModel,
+        enhanced_mode: enhancedMode || selectedModel === 'superclaude'
       })
 
       // Update session ID if new
@@ -80,7 +85,10 @@ export default function AIChatbot() {
       const aiMessage: Message = {
         role: 'assistant',
         content: response.data.response,
-        timestamp: response.data.timestamp
+        timestamp: response.data.timestamp,
+        enhanced: response.data.enhanced,
+        persona: response.data.persona,
+        thinkingSteps: response.data.thinking_steps
       }
       setMessages(prev => [...prev, aiMessage])
     } catch (error) {
@@ -115,13 +123,19 @@ export default function AIChatbot() {
           <div className="flex items-center gap-2">
             <select
               value={selectedModel}
-              onChange={(e) => setSelectedModel(e.target.value)}
+              onChange={(e) => {
+                setSelectedModel(e.target.value)
+                // Auto-enable enhanced mode for SuperClaude
+                if (e.target.value === 'superclaude') {
+                  setEnhancedMode(true)
+                }
+              }}
               className="vscode-input text-sm py-1 px-2"
               disabled={loading || loadingModels}
             >
               {availableModels.map((model) => (
                 <option key={model.id} value={model.id}>
-                  {model.name} {model.provider === 'ollama' && '(Local)'}
+                  {model.name} {model.provider === 'ollama' && '(Local)'} {model.provider === 'superclaude' && '⚡'}
                 </option>
               ))}
             </select>
@@ -133,6 +147,17 @@ export default function AIChatbot() {
             >
               <VscRefresh className={loadingModels ? 'animate-spin' : ''} size={16} />
             </button>
+            {selectedModel !== 'superclaude' && (
+              <label className="flex items-center gap-1 text-xs">
+                <input
+                  type="checkbox"
+                  checked={enhancedMode}
+                  onChange={(e) => setEnhancedMode(e.target.checked)}
+                  className="rounded"
+                />
+                <span className="text-vscode-text-dim">Enhanced</span>
+              </label>
+            )}
           </div>
         </div>
       </div>
@@ -171,9 +196,18 @@ export default function AIChatbot() {
                 }`}
               >
                 <p className="whitespace-pre-wrap">{message.content}</p>
-                <p className="text-xs opacity-70 mt-1">
-                  {new Date(message.timestamp).toLocaleTimeString()}
-                </p>
+                <div className="flex items-center gap-2 text-xs opacity-70 mt-1">
+                  <span>{new Date(message.timestamp).toLocaleTimeString()}</span>
+                  {message.enhanced && (
+                    <span className="text-vscode-blue">⚡ Enhanced</span>
+                  )}
+                  {message.persona && (
+                    <span className="text-vscode-green">👤 {message.persona}</span>
+                  )}
+                  {message.thinkingSteps && message.thinkingSteps > 0 && (
+                    <span className="text-vscode-yellow">🧠 {message.thinkingSteps} steps</span>
+                  )}
+                </div>
               </div>
               {message.role === 'user' && (
                 <VscAccount className="text-vscode-text-dim mt-1" size={20} />
@@ -216,12 +250,19 @@ export default function AIChatbot() {
           <p className="text-xs text-vscode-text-dim">
             Shift + Enter로 줄바꿈, Enter로 전송
           </p>
-          {selectedModel.startsWith('ollama/') && (
-            <p className="text-xs text-vscode-text-dim flex items-center gap-1">
-              <VscCloud size={12} />
-              로컬 모델 사용 중
-            </p>
-          )}
+          <div className="flex items-center gap-2">
+            {(enhancedMode || selectedModel === 'superclaude') && (
+              <p className="text-xs text-vscode-blue flex items-center gap-1">
+                ⚡ Enhanced Mode
+              </p>
+            )}
+            {selectedModel.startsWith('ollama/') && (
+              <p className="text-xs text-vscode-text-dim flex items-center gap-1">
+                <VscCloud size={12} />
+                로컬 모델 사용 중
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>

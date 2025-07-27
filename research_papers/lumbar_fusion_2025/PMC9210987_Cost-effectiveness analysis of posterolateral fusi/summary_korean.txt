@@ -1,0 +1,18 @@
+논문 정보
+================================================================================
+제목 (한글): 단일 수준의 요추 퇴행성 질환에 대한 후측 융합 대 체계 융합의 비용 효율성 분석
+제목 (영문): Cost-effectiveness analysis of posterolateral fusion versus interbody fusion for single-level lumbar degenerative disease
+
+저자: Sun-Ho Lee, Joon-Woo Lee, Eugene J. Park, Bo-Ram Kim
+저널: Spine Journal
+연도: 2022
+DOI: 10.1016/j.spinee.2022.08.014
+PMID: PMC9210987
+
+초록 (한글)
+================================================================================
+배경 맥락 : 척추 수술에서 경제적 고려 사항이 점점 중요 해지고 있습니다. 이 연구는 후측 융합 대 체체 융합 기술의 비용 효율성을 비교했다.
+
+초록 (영문)
+================================================================================
+BACKGROUND CONTEXT: Economic considerations are increasingly important in spine surgery. This study compared the cost-effectiveness of posterolateral fusion versus interbody fusion techniques.

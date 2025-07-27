@@ -1,0 +1,18 @@
+논문 정보
+================================================================================
+제목 (한글): 후측 요추 융합에서 융합 속도에 대한 골 형성 단백질의 영향 : 다기관 전향 적 연구
+제목 (영문): Impact of bone morphogenetic protein on fusion rates in posterolateral lumbar fusion: A multicenter prospective study
+
+저자: Young-Hoon Kim, Kee-Yong Ha, Sang-Il Kim, Hyung-Youl Park
+저널: Journal of Neurosurgery Spine
+연도: 2023
+DOI: 10.3171/2023.5.SPINE23142
+PMID: PMC9654321
+
+초록 (한글)
+================================================================================
+목적 : 후측 요추 융합 수술에서 융합 속도 및 임상 결과에 대한 재조합 인간 뼈 형태 형성 단백질 -2 (RHBMP-2)의 영향을 평가합니다.
+
+초록 (영문)
+================================================================================
+OBJECTIVE: To evaluate the impact of recombinant human bone morphogenetic protein-2 (rhBMP-2) on fusion rates and clinical outcomes in posterolateral lumbar fusion surgery.

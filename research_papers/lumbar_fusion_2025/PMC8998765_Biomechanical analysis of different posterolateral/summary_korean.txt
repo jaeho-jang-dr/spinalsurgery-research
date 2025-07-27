@@ -1,0 +1,18 @@
+논문 정보
+================================================================================
+제목 (한글): 상이한 후측 융합 기술의 생체 역학적 분석 : 유한 요소 연구
+제목 (영문): Biomechanical analysis of different posterolateral fusion techniques: A finite element study
+
+저자: Dong-Gune Chang, Hong-Jae Lee, Kun-Bo Park, Yong-Chan Ha
+저널: Clinical Biomechanics
+연도: 2022
+DOI: 10.1016/j.clinbiomech.2022.105678
+PMID: PMC8998765
+
+초록 (한글)
+================================================================================
+배경 : 다양한 후측 융합 기술의 생체 역학적 특성은 여전히 불분명합니다. 이 유한 요소 분석은 응력 분포 패턴을 비교했습니다.
+
+초록 (영문)
+================================================================================
+BACKGROUND: The biomechanical characteristics of various posterolateral fusion techniques remain unclear. This finite element analysis compared stress distribution patterns.

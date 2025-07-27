@@ -20,6 +20,7 @@ from app.models.user import User
 from app.models.chat_session import ChatSession, ChatMessage as ChatMessageModel
 from app.services.ai_service import ai_service
 from app.services.ollama_chat_service import ollama_chat_service
+from app.services.superclaude_ai_service import superclaude_ai_service
 
 router = APIRouter()
 
@@ -28,12 +29,20 @@ class ChatMessageRequest(BaseModel):
     session_id: Optional[str] = None
     context: Optional[str] = None
     model: Optional[str] = None
+    enhanced_mode: Optional[bool] = False
+    use_sequential: Optional[bool] = True
+    use_memory: Optional[bool] = True
+    use_magic: Optional[bool] = True
+    auto_persona: Optional[bool] = True
 
 class ChatResponse(BaseModel):
     response: str
     session_id: str
     timestamp: str
     model: str
+    enhanced: Optional[bool] = False
+    persona: Optional[str] = None
+    thinking_steps: Optional[int] = 0
 
 class ChatSessionResponse(BaseModel):
     session_id: str
@@ -104,37 +113,65 @@ async def chat_with_ai(
         } for msg in reversed(recent_messages)]
         
         # Get AI response
-        if chat_data.model and chat_data.model != "mock-llm":
-            ollama_chat_service.set_model(chat_data.model)
+        enhanced_response = None
+        persona_used = None
+        thinking_steps_count = 0
+        
+        # Use SuperClaude if enhanced mode is enabled
+        if chat_data.enhanced_mode or chat_data.model == "superclaude":
             try:
-                response = await ollama_chat_service.chat(
+                enhanced_result = await superclaude_ai_service.enhanced_chat(
                     message=chat_data.message,
-                    context=context_messages
+                    session_id=session_id,
+                    context=chat_data.context,
+                    use_sequential=chat_data.use_sequential,
+                    use_memory=chat_data.use_memory,
+                    use_magic=chat_data.use_magic,
+                    auto_persona=chat_data.auto_persona
                 )
-                if response and not response.startswith("Error:"):
-                    model_used = f"ollama/{ollama_chat_service.model}"
-                else:
+                response = enhanced_result["content"]
+                model_used = "superclaude-research"
+                enhanced_response = True
+                persona_used = enhanced_result.get("persona")
+                thinking_steps_count = enhanced_result.get("thinking_steps", 0)
+            except Exception as e:
+                print(f"SuperClaude failed: {e}")
+                # Fallback to regular AI
+                enhanced_response = False
+        
+        # Regular AI response if not enhanced mode
+        if not enhanced_response:
+            if chat_data.model and chat_data.model != "mock-llm":
+                ollama_chat_service.set_model(chat_data.model)
+                try:
+                    response = await ollama_chat_service.chat(
+                        message=chat_data.message,
+                        context=context_messages
+                    )
+                    if response and not response.startswith("Error:"):
+                        model_used = f"ollama/{ollama_chat_service.model}"
+                    else:
+                        # Fallback to mock
+                        response = await ai_service.mock_service.chat(
+                            message=chat_data.message,
+                            context=chat_data.context
+                        )
+                        model_used = "mock-llm"
+                except Exception as e:
+                    print(f"Ollama chat failed: {e}")
                     # Fallback to mock
                     response = await ai_service.mock_service.chat(
                         message=chat_data.message,
                         context=chat_data.context
                     )
                     model_used = "mock-llm"
-            except Exception as e:
-                print(f"Ollama chat failed: {e}")
-                # Fallback to mock
+            else:
+                # Use mock service
                 response = await ai_service.mock_service.chat(
                     message=chat_data.message,
                     context=chat_data.context
                 )
                 model_used = "mock-llm"
-        else:
-            # Use mock service
-            response = await ai_service.mock_service.chat(
-                message=chat_data.message,
-                context=chat_data.context
-            )
-            model_used = "mock-llm"
         
         # Add AI response to database
         ai_message = ChatMessageModel(
@@ -156,7 +193,10 @@ async def chat_with_ai(
             response=response,
             session_id=session_id,
             timestamp=datetime.utcnow().isoformat(),
-            model=model_used
+            model=model_used,
+            enhanced=enhanced_response or False,
+            persona=persona_used,
+            thinking_steps=thinking_steps_count
         )
         
     except Exception as e:
@@ -266,6 +306,16 @@ async def get_available_models(
 ) -> Any:
     """Get available AI models"""
     models = []
+    
+    # Add SuperClaude enhanced model
+    models.append({
+        "id": "superclaude",
+        "name": "SuperClaude Research AI (Enhanced)",
+        "provider": "superclaude",
+        "available": True,
+        "features": ["sequential_thinking", "memory", "personas", "magic_analysis"],
+        "description": "Advanced AI with MCP integration for complex research tasks"
+    })
     
     # Get Ollama models
     try:

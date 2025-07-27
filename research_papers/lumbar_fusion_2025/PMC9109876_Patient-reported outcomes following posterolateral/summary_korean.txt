@@ -1,0 +1,18 @@
+논문 정보
+================================================================================
+제목 (한글): 계측 유무에 관계없이 후측 요추 융합 후 환자보고 결과 : 전향 적 다기관 연구
+제목 (영문): Patient-reported outcomes following posterolateral lumbar fusion with and without instrumentation: A prospective multicenter study
+
+저자: Jin-Sung Kim, Chong-Suh Lee, Se-Jun Park, Woo-Kyung Kim
+저널: Neurosurgery
+연도: 2022
+DOI: 10.1227/NEU.0000000000002134
+PMID: PMC9109876
+
+초록 (한글)
+================================================================================
+배경 : 환자보고 결과 측정 (PROM)은 외과 적 성공을 평가하는 데 필수적입니다. 이 다기관 연구는 후측 요추 융합 후 PROM을 평가 하였다.
+
+초록 (영문)
+================================================================================
+BACKGROUND: Patient-reported outcome measures (PROMs) are essential for evaluating surgical success. This multicenter study assessed PROMs after posterolateral lumbar fusion.

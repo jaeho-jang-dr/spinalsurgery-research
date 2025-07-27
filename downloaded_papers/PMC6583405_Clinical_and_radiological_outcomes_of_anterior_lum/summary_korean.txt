@@ -1,0 +1,23 @@
+================================================================================
+논문 정보 (Paper Information)
+================================================================================
+
+제목 (English): Clinical and radiological outcomes of anterior lumbar interbody fusion: a comprehensive review
+제목 (Korean): 전방 요추 interbody 융합의 임상 및 방사선 결과 : 포괄적 인 검토
+
+저자: Guangfei Gu, Hailong Zhang, Shisheng He
+저널: European Spine Journal
+연도: 2019
+DOI: 10.1007/s00586-019-05992-5
+PMID: PMC6583405
+
+================================================================================
+초록 (Abstract)
+================================================================================
+
+[한글 번역]
+목적 :이 연구는 앞쪽 요추 interbody fusion (ALIF) 후 임상 및 방사선 결과에 대한 포괄적 인 검토를 수행하는 것을 목표로했습니다.
+
+[Original English]
+PURPOSE: This study aimed to conduct a comprehensive review of clinical and radiological outcomes after anterior lumbar interbody fusion (ALIF)...
+
